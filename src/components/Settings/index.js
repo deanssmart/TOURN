@@ -8,7 +8,7 @@ const mapStateToProps = ({ players }) => ({ players });
 const mapDispatchToProps = dispatch => {
     return {
         handleAddPlayer: (player) => dispatch(addPlayer(player)),
-        handleStartTournament: () => dispatch(startTournament()),
+        handleStartTournament: (players) => dispatch(startTournament(players)),
     };
 };
 

@@ -22,21 +22,22 @@ class Settings extends Component {
     //adds the player name to the global state palyers array
     handleSubmitPlayer(e) {
         e.preventDefault();
-        const { player } =this.state;
+        const { player } = this.state;
 
         if(player !== "") {
             this.props.handleAddPlayer(player);
         };
 
         this.setState({ player: ""});
-    }
+    };
 
     //starts the tournament
     handleSubmitStart(e) {
         e.preventDefault();
-        this.props.handleStartTournament();
+        const { players } = this.props;
+        this.props.handleStartTournament(players);
 
-    }
+    };
 
     render() {
         const { player } = this.state;

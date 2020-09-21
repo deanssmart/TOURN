@@ -5,8 +5,9 @@ export const addPlayer = (player) => {
     };
 };
 
-export const startTournament = () => {
+export const startTournament = (players) => {
     return {
+        players,
         type: "START_TOURNAMENT",
     };
 };

@@ -1,3 +1,5 @@
+import { shuffleArray } from './helperFunctions/shuffle';
+
 const addPlayerReducer = (state, { player }) => {
     return {
         ...state,
@@ -5,9 +7,10 @@ const addPlayerReducer = (state, { player }) => {
     };
 };
 
-const startTournamentReducer = (state) => {
+const startTournamentReducer = (state, { players }) => {
     return {
         ...state,
+        players: shuffleArray(players),
         tournamentStarted: true,
     };
 };
@@ -15,7 +18,7 @@ const startTournamentReducer = (state) => {
 const reducer = (state, action) => {
     switch (action.type) {
         case "ADD_PLAYER": return addPlayerReducer(state, action);
-        case "START_TOURNAMENT": return startTournamentReducer(state);
+        case "START_TOURNAMENT": return startTournamentReducer(state, action);
         default: return state;
     };
 };
