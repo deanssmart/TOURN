@@ -5,9 +5,17 @@ const addPlayerReducer = (state, { player }) => {
     };
 };
 
+const startTournamentReducer = (state) => {
+    return {
+        ...state,
+        tournamentStarted: true,
+    };
+};
+
 const reducer = (state, action) => {
     switch (action.type) {
         case "ADD_PLAYER": return addPlayerReducer(state, action);
+        case "START_TOURNAMENT": return startTournamentReducer(state);
         default: return state;
     };
 };
