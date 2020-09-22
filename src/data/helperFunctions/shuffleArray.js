@@ -1,4 +1,4 @@
-// Randomise array element order in-place using Durstenfeld shuffle algorithm
+//This helper function randomises the order of array elements in-place using Durstenfeld shuffle algorithm
 
 export const shuffleArray = array => {
     for (let i = array.length - 1; i > 0; i -=1 ) {

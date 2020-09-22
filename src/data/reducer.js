@@ -1,4 +1,5 @@
-import { shuffleArray } from './helperFunctions/shuffle';
+import { shuffleArray } from './helperFunctions/shuffleArray';
+import { chunkArray } from './helperFunctions/chunkArray';
 
 const addPlayerReducer = (state, { player }) => {
     return {
@@ -8,9 +9,10 @@ const addPlayerReducer = (state, { player }) => {
 };
 
 const startTournamentReducer = (state, { players }) => {
+    
     return {
         ...state,
-        players: shuffleArray(players),
+        games: chunkArray(shuffleArray(players), 2),
         tournamentStarted: true,
     };
 };

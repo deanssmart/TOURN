@@ -1,5 +1,6 @@
 const initial = {
     players: [],
+    games: [],
     tournamentStarted: false,
 
   };
