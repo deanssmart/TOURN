@@ -19,7 +19,7 @@ class Settings extends Component {
         this.setState({ player: e.currentTarget.value });
     };
 
-    //adds the player name to the global state palyers array
+    //adds the player name to the global state players array
     handleSubmitPlayer(e) {
         e.preventDefault();
         const { player } = this.state;
