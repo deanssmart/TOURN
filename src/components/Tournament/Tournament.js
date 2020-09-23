@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Button from '../Button/Button';
+import Game from '../Game';
 
 class Tournament extends Component {
 
@@ -10,9 +10,11 @@ class Tournament extends Component {
             <>
                 <div>
                     {games.map((game, i) => (
-                        <div>
-                            <h2 key={i}>{game.i}</h2>
-                        </div>
+                        <Game 
+                            key={ i }
+                            game={ `Game ${i + 1}` }
+                            players={game}
+                        />
                     ))}
                 </div>
             </>
