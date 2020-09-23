@@ -24,7 +24,7 @@ class Settings extends Component {
         e.preventDefault();
         const { player } = this.state;
 
-        if(player !== "") {
+        if(player !== "") {        
             this.props.handleAddPlayer(player);
         };
 
@@ -68,7 +68,7 @@ class Settings extends Component {
                         players.length === 0 ? null :
                         <ul>
                             {players.map((player, i) => (
-                                <li key={i}>{player}</li>
+                                <li key={i}>{player.name}</li>
                             ))}
                         </ul>
                     }

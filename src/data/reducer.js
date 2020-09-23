@@ -4,16 +4,27 @@ import { chunkArray } from './helperFunctions/chunkArray';
 const addPlayerReducer = (state, { player }) => {
     return {
         ...state,
-        players: [...state.players, player],
+        counter: state.counter + 1,
+        players: [...state.players, 
+            {
+                "id": state.counter + 1,
+                "name": player.trim(),
+                "won": false,
+                "played": false,
+            }
+        ],
     };
 };
 
 const startTournamentReducer = (state, { players }) => {
+    let games = chunkArray(shuffleArray([...players]), 2);
+    let rounds = games.length;
     
     return {
         ...state,
-        games: chunkArray(shuffleArray(players), 2),
         tournamentStarted: true,
+        games,
+        rounds,   
     };
 };
 

@@ -1,8 +1,9 @@
 const initial = {
+    counter: 0,
+    tournamentStarted: false,
     players: [],
     games: [],
-    tournamentStarted: false,
-
+    rounds: 0,
   };
   
   export default initial;
