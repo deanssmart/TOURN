@@ -4,7 +4,7 @@ import { playerWon } from '../../data/actions/state';
 
 const mapDispatchToProps = dispatch => {
     return {
-        handleWin: (id) => dispatch(playerWon(id)),
+        handleWin: (player) => dispatch(playerWon(player)),
     };
 };
 

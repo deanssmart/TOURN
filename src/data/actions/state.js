@@ -12,9 +12,9 @@ export const startTournament = (players) => {
     };
 };
 
-export const playerWon = (id) => {
+export const playerWon = (player) => {
     return {
-        id,
+        player,
         type: "PLAYER_WON"
     }
 }

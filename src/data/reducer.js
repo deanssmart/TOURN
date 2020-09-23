@@ -17,6 +17,10 @@ const addPlayer = (state, { player }) => {
     };
 };
 
+// const createGames = (state, { players }) => {
+
+// }
+
 const startTournament = (state, { players }) => {
     //takes a copy of the players array mix up the positions using the shuffleArray helper function and then pass the new shuffled players to the chunckArray helper function to split it into pairings for the tournament
     let games = chunkArray(shuffleArray([...players]), 2);
@@ -24,27 +28,33 @@ const startTournament = (state, { players }) => {
     
     return {
         ...state,
-        players: initial.players, 
+        players, 
         tournamentStarted: true,
         games,
         rounds,   
     };
 };
 
-const playerWon = (state, { id }) => {
-    let games = state.games.map(game => game.map(player => {
-            if (player.id === id) {
+const playerWon = (state, { player }) => {
+    // const findGame = state.games.filter(game => game.find(player => player.id === id))[0];
+    // console.log(findGame);
+
+    // const findPlayer = state.players.find(player => player.id === id);
+    // console.log(findPlayer);
+    let games = state.games.map(game => game.map(p => {
+            if (p.id === player.id) {
                 return {
-                    ...player,
-                    won: !state.won,
+                    ...p,
+                    won: !player.won,
                 };
             }
-            return player;
+            return p;
         }))    
 
     return {
         ...state,
         games,
+
     }
 }
 
