@@ -7,16 +7,37 @@ class Game extends Component {
 
         this.state = {winner: 0};
 
-        this.handleP1 = this.handleP1.bind(this);
-        this.handleP2 = this.handleP2.bind(this);
+        this.handleP1Win = this.handleP1Win.bind(this);
+        this.handleP2Win = this.handleP2Win.bind(this);
     }
 
-    handleP1() {
-        this.setState({winner: 1})
+    handleP1Win(game) {
+        const { roundsCompleted } = this.state;
+        console.log(game);
+        
+        if(game.round === roundsCompleted + 1) {
+            const updateGame = {
+                ...game,
+                winner: 1,
+            };
+
+            this.props.handleWin(updateGame);
+            this.setState({winner: 1});
+        }        
     }
 
-    handleP2() {
-        this.setState({winner: 2})
+    handleP2Win() {
+        const { game, roundsCompleted } = this.state;
+        
+        if(game.round === roundsCompleted + 1) {
+            const updateGame = {
+                ...game,
+                winner: 2,
+            };
+
+            this.props.handleWin(updateGame);
+            this.setState({winner: 2});
+        }      
     }
 
     // handleSubmitWin(e, player) {
@@ -35,7 +56,7 @@ class Game extends Component {
                 <div>
                 <Button 
                     buttonClass="btn btn-primary"
-                    handleClick={this.handleP1}
+                    handleClick={this.handleP1Win(game)}
                     type="button"
                     label="Won"
                 />
@@ -44,7 +65,7 @@ class Game extends Component {
                 <div>
                 <Button 
                     buttonClass="btn btn-danger"
-                    handleClick={this.handleP2}
+                    handleClick={this.handleP2Win}
                     type="button"
                     label="Won"
                 />

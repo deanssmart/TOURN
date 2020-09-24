@@ -40,24 +40,25 @@ const createGames = (state, { players }) => {
     return {
         ...state,
         games,
+        numberOfRounds,
     };
 };
 
-//populates games array with the players id, for the initial set up the shuffle array function is called to mix the players order from then on the players are passed to the next round depending on who has won the previous round 
+//populates games array with the players id, for the initial setup the shuffle array function is called to mix the players order, from then on the players are passed to the next round depending on who has won the previous round 
 const populateGames = (state, { players }) => {
-    let competing = [];
-    if(state.currentRound === 0) {
+    let competingPlayers = [];
+    if(state.roundsCompleted === 0) {
         let shuffledPlayers = shuffleArray([...players]);
-        competing = shuffledPlayers.map(player => player.id);
+        competingPlayers = shuffledPlayers.map(player => player.id);
     } 
 
     
     let games = state.games.map((game) => {
-        if(game.round === state.currentRound + 1) {
+        if(game.round === state.roundsCompleted + 1) {
             return {
                 ...game,
-                p1: competing.pop(),
-                p2: competing.pop(),
+                p1: competingPlayers.pop(),
+                p2: competingPlayers.pop(),
             };
         }
         return game;

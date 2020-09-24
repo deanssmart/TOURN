@@ -3,7 +3,8 @@ const initial = {
     tournamentStarted: false,
     players: [],
     games: [],
-    currentRound: 0,
+    roundsCompleted: 0,
+    numberOfRounds: 0,
   };
   
   export default initial;
