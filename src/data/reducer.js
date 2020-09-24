@@ -16,7 +16,7 @@ const addPlayer = (state, { player }) => {
     };
 };
 
-//create an array of game objects to be populated with players
+//create an array of game objects to be populated with players, defining the games from the outset means that I can display all the tournament rounds on a single page
 const createGames = (state, { players }) => {
     let gameID = 1;
     let games = [];
@@ -28,8 +28,8 @@ const createGames = (state, { players }) => {
             games[games.length] = {
                 id: gameID,
                 round: i,
-                p1: "",
-                p2: "",
+                p1: 0,
+                p2: 0,
                 winner: 0,
             };
             gameID += 1;
@@ -43,22 +43,21 @@ const createGames = (state, { players }) => {
     };
 };
 
+//populates games array with the players id, for the initial set up the shuffle array function is called to mix the players order from then on the players are passed to the next round depending on who has won the previous round 
 const populateGames = (state, { players }) => {
-    let playing = [];
+    let competing = [];
     if(state.currentRound === 0) {
         let shuffledPlayers = shuffleArray([...players]);
-        playing = shuffledPlayers.map(player => player.id)
-        console.log(playing);
+        competing = shuffledPlayers.map(player => player.id);
+    } 
 
-    }
     
-    let games = state.games.map((game, i) => {
+    let games = state.games.map((game) => {
         if(game.round === state.currentRound + 1) {
-            console.log(playing[i]);
             return {
                 ...game,
-                p1: playing.pop(),
-                p2: playing.pop(),
+                p1: competing.pop(),
+                p2: competing.pop(),
             };
         }
         return game;
@@ -67,6 +66,7 @@ const populateGames = (state, { players }) => {
     return {
         ...state,
         games,
+        tournamentStarted: true,
     }
 }
 

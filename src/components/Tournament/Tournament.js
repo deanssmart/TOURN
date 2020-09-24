@@ -3,18 +3,22 @@ import Game from '../Game';
 
 class Tournament extends Component {
 
+    
     render() {
-        const { games } = this.props;
+        const { games, players } = this.props;
+        // const rounds = [];
+        // for(let i = 1; i <= numberORounds; i += 1){
+        //     rounds[rounds.length] = ()
+        // }
+
 
         return (
             <>
                 <div>
                     {games.map((game, i) => (
-                        <Game 
-                            key={ i }
-                            game={ `Game ${i + 1}` }
-                            players={game}
-                        />
+                        <div>
+                            <Game key={ i } game={ game }/>
+                        </div>
                     ))}
                 </div>
             </>
