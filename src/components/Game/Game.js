@@ -39,9 +39,6 @@ class Game extends Component {
 
     render() {
         const { game, players } = this.props;
-        const findGame = players.filter(game => game.find(player => player.id === playerID))[0];
-
-        console.log(findGame);
 
         const player1 = players.find(player => player.id === game.p1);
         const player2 = players.find(player => player.id === game.p2);
