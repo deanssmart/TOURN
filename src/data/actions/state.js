@@ -12,9 +12,16 @@ export const startTournament = (players) => {
     };
 };
 
-export const playerWon = (player) => {
+export const playerWon = (winner, playerID) => {
     return {
-        player,
+        winner,
+        playerID,
         type: "PLAYER_WON"
-    }
-}
+    };
+};
+
+export const nextRound = () => {
+    return {
+        type: "NEXT_ROUND",
+    };
+};
