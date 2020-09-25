@@ -8,17 +8,12 @@ class Round extends Component {
         super(props);
 
         this.handleSubmitNextRound = this.handleSubmitNextRound.bind(this);
-        this.handleSubmitReset = this.handleSubmitReset.bind(this);
+
     };
 
     handleSubmitNextRound(e) {
         e.preventDefault();
         this.props.handleNextRound();
-    };
-
-    handleSubmitReset(e) {
-        e.preventDefault();
-        this.props.handleReset();
     };
 
     render() {
@@ -44,16 +39,10 @@ class Round extends Component {
                             type="submit"
                             label={ i + 1 === totalRounds ? 'Show the Tronmaster' : "Next Round" } 
                         />
-                        <Button
-                            buttonClass="btn btn-danger"
-                            handleClick={ this.handleSubmitReset }
-                            type="submit"
-                            label="Reset"
-                        />
                     </article>                      
                 ))}
             </>
-        )
+        );
     };
 };
 

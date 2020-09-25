@@ -10,7 +10,6 @@ class Settings extends Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmitPlayer = this.handleSubmitPlayer.bind(this);
-        this.handleSubmitStart = this.handleSubmitStart.bind(this);
 
     };
 
@@ -29,14 +28,6 @@ class Settings extends Component {
         };
 
         this.setState({ player: ""});
-    };
-
-    //starts the tournament
-    handleSubmitStart(e) {
-        e.preventDefault();
-        const { players } = this.props;
-        this.props.handleStartTournament(players);
-
     };
 
     render() {
@@ -61,7 +52,7 @@ class Settings extends Component {
                     />
                 </form>
 
-                <form onSubmit={this.handleSubmitStart} className="form-group">
+                <article>
                     <h2>Players</h2>
                     {
                         //map over golbal state players array and add player names to the list
@@ -72,12 +63,7 @@ class Settings extends Component {
                             ))}
                         </ul>
                     }
-                    <Button
-                        label="Start"
-                        buttonClass="btn btn-success"
-                        type="submit"
-                    />
-                </form>
+                </article>
             </>
         );
     };
