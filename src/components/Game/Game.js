@@ -27,6 +27,7 @@ class Game extends Component {
     // };
 
     render() {
+        const { winner } = this.state;
         const { game, round } = this.props;
 
         return (
@@ -38,6 +39,8 @@ class Game extends Component {
                     handleClick={() => this.handleP1Win(game.player1, game.roundID)}
                     type="button"
                     label="Won"
+                    disable={ winner !== 0 }
+
                 />
                 <p>{ game.player1 }</p>                    
                 </div>
@@ -47,6 +50,7 @@ class Game extends Component {
                     handleClick={() => this.handleP2Win(game.player2, game.roundID)}
                     type="button"
                     label="Won"
+                    disable={ winner !== 0 }
                 />
                 <p>{ game.player2 }</p>                    
                 </div>

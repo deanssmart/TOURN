@@ -4,7 +4,7 @@ export const gameArrayCreator = (players) => {
 	let gameID = 1;
 	let previousGame = {};
 	return players.reduce((games, current) => {
-		if(previousGame && current.gameID === previousGame.gameID) { 
+		if(current.gameID === previousGame.gameID) { 
 			games.push({
 				id: gameID,
 				player1: previousGame.name,

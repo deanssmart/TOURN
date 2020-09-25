@@ -20,9 +20,9 @@ class Round extends Component {
         
         return (
             <>
+            <h2>{ rounds.length === totalRounds ? "Final" : rounds.length === (totalRounds - 1) ? "Semifinals" : rounds.length === (totalRounds - 2) ? "Quarterfinals" : `Round ${ rounds.length }`}</h2>
                 {rounds.map((round, i) => (
-                    <article key={ i }>
-                        <h2>{`Round ${ i + 1}`}</h2>
+                    <article key={ i }>                        
                         <ul>
                             {gameArrayCreator(round).map((game, j) => 
                                 <Game 

@@ -42,7 +42,7 @@ const playerWon = (state, { player, roundID }) => {
             name: player,
             roundID: roundID + 1,
         }],
-        champion: state.totalRounds === state.rounds.length ? player.name : null,
+        champion: state.totalRounds === state.rounds.length ? player : null,
     };
 };
 
@@ -55,6 +55,7 @@ const nextRound = (state) => {
         players: initial.players,
         rounds: [...state.rounds, updateRounds],
         roundsCompleted: state.roundsCompleted + 1,
+        playerCounter: initial.playerCounter,
         final,
     };
 };
