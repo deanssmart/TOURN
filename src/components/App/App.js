@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../style/css/App.css';
+import '../../style/css/styles.css';
 import Footer from '../Footer';
 import Settings from '../Settings';
 import Tournament from '../Tournament';

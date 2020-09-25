@@ -1,0 +1,14 @@
+:root {
+/* colours */
+--appBlue: #15abc3;
+--appBlack: #000000;
+
+/* fonts */
+--baseFont: "Orbitron", serif; 
+--specialFont: "Gnome", sans-serif;
+}
+
+body {
+    background-color: var(--appBlack);
+}
+

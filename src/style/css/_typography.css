@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "Gnome";
+    font-weight: normal;
+    font-style: normal;
+    src: url("./fonts/Gnome.woff");
+  }
+
+@font-face {
+    font-family: "Orbitron";
+    font-weight: normal;
+    font-style: normal;
+    src: url("./fonts/Orbitron-VariableFont_wght.ttf");
+  }
+
+body {
+    font-family: var(--baseFont);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--appBlue);
+}
