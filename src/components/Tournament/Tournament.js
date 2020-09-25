@@ -1,29 +1,12 @@
-import React, { Component } from 'react';
-import Game from '../Game';
+import React from 'react';
+import Champion from '../Champion';
+import Round from '../Round';
 
-class Tournament extends Component {
-
-    
-    render() {
-        const { games, players } = this.props;
-        // const rounds = [];
-        // for(let i = 1; i <= numberORounds; i += 1){
-        //     rounds[rounds.length] = ()
-        // }
-
-
-        return (
-            <>
-                <div>
-                    {games.map((game, i) => (
-                        <div>
-                            <Game key={ i } game={ game }/>
-                        </div>
-                    ))}
-                </div>
-            </>
-        );
-    };
-};
+const Tournament = ({ complete }) => (
+    <>
+    { complete ? <Champion/> : <Round /> }
+    </>
+);         
 
 export default Tournament;
+

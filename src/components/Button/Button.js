@@ -5,12 +5,14 @@ const Button = ({
     buttonClass,
     type, 
     handleClick, 
+    disable,
 }) => (
   
   <button 
     className={buttonClass}
     onClick={handleClick}
     type={type}
+    disabled={ disable } 
   >
     {label}
   </button>
@@ -18,7 +20,7 @@ const Button = ({
 );
 
 Button.defaultProps = {
-  onClick: null,
+  disable: false,
 };
 
 export default Button;

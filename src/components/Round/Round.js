@@ -1,41 +1,53 @@
-import React, { Component } from 'react';
-import Button from '../Button/Button';
+import React, { Component } from "react";
 import Game from '../Game';
+import { gameArrayCreator } from '../../data/helperFunctions/gameArrayCreator';
+import Button from "../Button/Button";
 
 class Round extends Component {
     constructor(props) {
         super(props);
 
-        this.handleSubmitRound = this.handleSubmitRound.bind(this);
-        // this.handleSubmitComplete = this.handleSubmitComplete.bind(this);
+        this.handleSubmitNextRound = this.handleSubmitNextRound.bind(this);
+
     };
-    
-    handleSubmitRound(e) {
+
+    //passes the players who won their round from the players array to the rounds array 
+    handleSubmitNextRound(e) {
         e.preventDefault();
         this.props.handleNextRound();
-    }
+    };
 
     render() {
-
-        const { games, tournamentComplete, currentRound } = this.props;
-
+        const { rounds, totalRounds, playerCounter } = this.props;
+        
         return (
+
+            //smart title to display 
             <>
-            <h2>{`Round ${currentRound + 1}`}</h2>
-                <div>
-                    {games.map((game, i) => (
-                       <Game key={ i } game={ i + 1 } players={ game }/>
-                    ))}
-                </div>
-            <Button 
-                buttonClass="btn btn-primary"
-                handleClick={ this.handleSubmitRound }
-                type="submit" 
-                label="Next Round"
-            />
+                {rounds.map((round, i) => (              
+                    <article key={ i }>
+                        <h2>{ i + 1 === totalRounds ? "Final" : i + 1 === (totalRounds - 1) ? "Semifinals" : i + 1 === (totalRounds - 2) ? "Quarterfinals" : `Round ${ i + 1 }`}</h2>         
+                        <ul>
+                            {gameArrayCreator(round).map((game, j) => 
+                                <Game 
+                                    key={ j }
+                                    round={ round }
+                                    game={ game }
+                                />
+                            )}
+                        </ul>
+                        <Button
+                            buttonClass="btn btn-success"
+                            handleClick={ this.handleSubmitNextRound }
+                            type="submit"
+                            label={ i + 1 === totalRounds ? 'Show the Tronmaster' : "Next Round" }
+                            disable={ playerCounter !== (round.length / 2) } 
+                        />
+                    </article>                      
+                ))}
             </>
-        )
-    }
-}
+        );
+    };
+};
 
 export default Round;

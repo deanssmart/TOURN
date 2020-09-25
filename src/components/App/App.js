@@ -1,15 +1,15 @@
 import React from 'react';
 import '../../style/css/App.css';
+import Footer from '../Footer';
 import Settings from '../Settings';
 import Tournament from '../Tournament';
-import Round from '../Round';
-
 
 const App = ({ tournamentStarted }) => (
   <>
   { !tournamentStarted ? <Settings /> :
-    <Round />
+    <Tournament />    
   }
+  <Footer />
   </>
 );
 

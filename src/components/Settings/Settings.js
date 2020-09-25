@@ -10,7 +10,6 @@ class Settings extends Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmitPlayer = this.handleSubmitPlayer.bind(this);
-        this.handleSubmitStart = this.handleSubmitStart.bind(this);
 
     };
 
@@ -31,17 +30,9 @@ class Settings extends Component {
         this.setState({ player: ""});
     };
 
-    //starts the tournament
-    handleSubmitStart(e) {
-        e.preventDefault();
-        const { players } = this.props;
-        this.props.handleStartTournament(players);
-
-    };
-
     render() {
         const { player } = this.state;
-        const { players } = this.props;
+        const { players, playerNumberError } = this.props;
 
         return (
             <>
@@ -54,6 +45,8 @@ class Settings extends Component {
                         value={player}
                         handleChange={this.handleChange}
                     />
+                    { playerNumberError ? 
+                    <p>Total number of players needs to be a power of 2 (i.e.2, 4, 8, 16, 32 ...) </p> : null }
                     <Button
                         label="Add"
                         buttonClass="btn btn-primary"
@@ -61,23 +54,18 @@ class Settings extends Component {
                     />
                 </form>
 
-                <form onSubmit={this.handleSubmitStart} className="form-group">
+                <article>
                     <h2>Players</h2>
                     {
                         //map over golbal state players array and add player names to the list
                         players.length === 0 ? null :
-                        <ul>
+                        <ol>
                             {players.map((player, i) => (
                                 <li key={i}>{player.name}</li>
                             ))}
-                        </ul>
+                        </ol>
                     }
-                    <Button
-                        label="Start"
-                        buttonClass="btn btn-success"
-                        type="submit"
-                    />
-                </form>
+                </article>
             </>
         );
     };
