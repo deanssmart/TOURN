@@ -11,33 +11,16 @@ class Game extends Component {
         this.handleP2Win = this.handleP2Win.bind(this);
     }
 
-    handleP1Win(game) {
-        const { roundsCompleted } = this.state;
-        console.log(game);
-        
-        if(game.round === roundsCompleted + 1) {
-            const updateGame = {
-                ...game,
-                winner: 1,
-            };
-
-            this.props.handleWin(updateGame);
-            this.setState({winner: 1});
-        }        
+    handleP1Win() {
+        this.props.handleWin();
+        this.setState({winner: 1});
+                
     }
 
     handleP2Win() {
-        const { game, roundsCompleted } = this.state;
+        this.props.handleWin();
+        this.setState({winner: 2});
         
-        if(game.round === roundsCompleted + 1) {
-            const updateGame = {
-                ...game,
-                winner: 2,
-            };
-
-            this.props.handleWin(updateGame);
-            this.setState({winner: 2});
-        }      
     }
 
     // handleSubmitWin(e, player) {
@@ -46,9 +29,9 @@ class Game extends Component {
     // };
 
     render() {
-        const { game, players } = this.props;
-        const player1 = players.find(player => player.id === game.p1);
-        const player2 = players.find(player => player.id === game.p2);
+        const { game, round } = this.props;
+        // const player1 = players.find(player => player.id === game.p1);
+        // const player2 = players.find(player => player.id === game.p2);
 
         return (
             <article>
@@ -56,11 +39,11 @@ class Game extends Component {
                 <div>
                 <Button 
                     buttonClass="btn btn-primary"
-                    handleClick={this.handleP1Win(game)}
+                    handleClick={this.handleP1Win}
                     type="button"
                     label="Won"
                 />
-                <p>{ player1 === undefined ? "?" : player1.name }</p>                    
+                <p>{ game.name }</p>                    
                 </div>
                 <div>
                 <Button 
@@ -69,7 +52,7 @@ class Game extends Component {
                     type="button"
                     label="Won"
                 />
-                <p>{ player2 === undefined ? "?" : player2.name }</p>                    
+                <p>{ game.name }</p>                    
                 </div>
                  {/* {
                     players.map(player => (

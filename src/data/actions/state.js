@@ -15,6 +15,19 @@ export const startTournament = (players) => {
 export const playerWon = (player) => {
     return {
         player,
-        type: "PLAYER_WON"
-    }
-}
+        type: "PLAYER_WON",
+    };
+};
+
+export const nextRound = (players) => {
+    return {
+        players,
+        type: "NEXT_ROUND",
+    };
+};
+
+export const reset = () => {
+    return {
+        type: "RESET",
+    };
+};

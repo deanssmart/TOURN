@@ -1,10 +1,11 @@
 const initial = {
-    playerCounter: 0,
     tournamentStarted: false,
+    playerCounter: 0,
     players: [],
-    games: [],
+    rounds: [],
+    totalRounds: 0,
     roundsCompleted: 0,
-    numberOfRounds: 0,
+    champion: "",
   };
   
   export default initial;

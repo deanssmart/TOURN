@@ -2,6 +2,6 @@ import { connect } from "react-redux";
 import Round from './Round';
 
 
-const mapStateToProps = ({ games, numberOfRounds }, { roundNumber }) => ({ games, numberOfRounds, roundNumber });
+const mapStateToProps = ({ rounds }) => ({ rounds });
 
 export default connect(mapStateToProps)(Round);
