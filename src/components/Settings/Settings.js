@@ -35,8 +35,6 @@ class Settings extends Component {
         const { player } = this.state;
         const { players, playerNumberError } = this.props;
 
-        console.log(isPowerOf2(1));
-
         return (
             <>
                 <form onSubmit={this.handleSubmitPlayer} className="form-group">
@@ -62,11 +60,11 @@ class Settings extends Component {
                     {
                         //map over golbal state players array and add player names to the list
                         players.length === 0 ? null :
-                        <ul>
+                        <ol>
                             {players.map((player, i) => (
                                 <li key={i}>{player.name}</li>
                             ))}
-                        </ul>
+                        </ol>
                     }
                 </article>
             </>
