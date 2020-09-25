@@ -1,11 +1,12 @@
 :root {
 /* colours */
---appBlue: #15abc3;
+--appBlue: #15abc3; 
+--appHighlight: #19cde9;
 --appBlack: #000000;
 
 /* fonts */
 --baseFont: "Orbitron", serif; 
---specialFont: "Gnome", sans-serif;
+--specialFont: "Tr2n", sans-serif;
 }
 
 body {

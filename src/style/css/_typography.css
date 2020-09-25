@@ -1,20 +1,48 @@
 @font-face {
-    font-family: "Gnome";
-    font-weight: normal;
-    font-style: normal;
-    src: url("./fonts/Gnome.woff");
-  }
-
-@font-face {
     font-family: "Orbitron";
     font-weight: normal;
     font-style: normal;
     src: url("./fonts/Orbitron-VariableFont_wght.ttf");
   }
 
+@font-face {
+    font-family: "Tr2n";
+    font-weight: normal;
+    font-style: normal;
+    src: url("./fonts/Tr2n.ttf");
+  }
+
 body {
     font-family: var(--baseFont);
     font-size: 1rem;
     font-weight: 400;
-    color: var(--appBlue);
+    color: var(--appHighlight);
 }
+
+
+.title {
+    font-family: var(--specialFont);
+    font-size: 12rem;
+    font-weight: 800;
+    color: var(--appHiglight);
+    text-align: center;
+    filter: drop-shadow(2px 2px 20px var(--appHighlight));
+    -webkit-text-stroke: 4px var(--appBlue);
+
+}
+
+/* .title:hover {
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 9px var(--appBlue), 0 0 12px var(--appBlue), 0 0 15px var(--appBlue), 0 0 18px var(--appBlue), 0 0 21px var(--appBlue);
+    }
+    
+    to {
+      text-shadow: 0 0 3px #fff, 0 0 6px var(--appBlue), 0 0 9px var(--appBlue), 0 0 12px var(--appBlue), 0 0 15px var(--appBlue), 0 0 18px var(--appBlue), 0 0 21px var(--appBlue);
+    }
+  } */
