@@ -1,6 +1,5 @@
 import initial from './initial';
 import { shuffleArray } from './helperFunctions/shuffleArray';
-import { chunkArray } from './helperFunctions/chunkArray';
 import { addGameID } from './helperFunctions/addGameID';
 
 //add players to the players array
@@ -48,7 +47,7 @@ const playerWon = (state, { player, roundID }) => {
 
 const nextRound = (state) => {
     let updateRounds = addGameID(state.players);
-    let final = state.roundsCompleted + 1 === state.totalRounds;
+    let complete = state.roundsCompleted + 1 === state.totalRounds;
 
     return {
         ...state,
@@ -56,7 +55,7 @@ const nextRound = (state) => {
         rounds: [...state.rounds, updateRounds],
         roundsCompleted: state.roundsCompleted + 1,
         playerCounter: initial.playerCounter,
-        final,
+        complete,
     };
 };
 

@@ -21,38 +21,33 @@ class Game extends Component {
         this.setState({winner: 2});        
     }
 
-    // handleSubmitWin(e, player) {
-    //     e.preventDefault();
-    //     this.props.handleWin(player);
-    // };
-
     render() {
         const { winner } = this.state;
-        const { game, round } = this.props;
+        const { game } = this.props;
 
         return (
             <section>
                 <h3>{ `Game ${game.id}` }</h3>
                 <div>
-                <Button 
-                    buttonClass="btn btn-primary"
-                    handleClick={() => this.handleP1Win(game.player1, game.roundID)}
-                    type="button"
-                    label="Won"
-                    disable={ winner !== 0 }
+                    <Button 
+                        buttonClass="btn btn-primary"
+                        handleClick={() => this.handleP1Win(game.player1, game.roundID)}
+                        type="button"
+                        label="Won"
+                        disable={ winner !== 0 }
 
-                />
-                <p>{ game.player1 }</p>                    
+                    />
+                    <p>{ game.player1 }</p>                    
                 </div>
                 <div>
-                <Button 
-                    buttonClass="btn btn-danger"
-                    handleClick={() => this.handleP2Win(game.player2, game.roundID)}
-                    type="button"
-                    label="Won"
-                    disable={ winner !== 0 }
-                />
-                <p>{ game.player2 }</p>                    
+                    <Button 
+                        buttonClass="btn btn-danger"
+                        handleClick={() => this.handleP2Win(game.player2, game.roundID)}
+                        type="button"
+                        label="Won"
+                        disable={ winner !== 0 }
+                    />
+                    <p>{ game.player2 }</p>                    
                 </div>
             </section>
         );

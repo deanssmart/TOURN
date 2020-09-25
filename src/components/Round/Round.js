@@ -8,12 +8,18 @@ class Round extends Component {
         super(props);
 
         this.handleSubmitNextRound = this.handleSubmitNextRound.bind(this);
-    }
+        this.handleSubmitReset = this.handleSubmitReset.bind(this);
+    };
 
     handleSubmitNextRound(e) {
         e.preventDefault();
         this.props.handleNextRound();
-    }
+    };
+
+    handleSubmitReset(e) {
+        e.preventDefault();
+        this.props.handleReset();
+    };
 
     render() {
         const { rounds, totalRounds } = this.props;
@@ -36,11 +42,11 @@ class Round extends Component {
                             buttonClass="btn btn-success"
                             handleClick={ this.handleSubmitNextRound }
                             type="submit"
-                            label={ i + 1 === totalRounds ? 'Choose the Tronmaster' : "Next Round" } 
+                            label={ i + 1 === totalRounds ? 'Show the Tronmaster' : "Next Round" } 
                         />
                         <Button
                             buttonClass="btn btn-danger"
-                            handleClick={ this.handleReset }
+                            handleClick={ this.handleSubmitReset }
                             type="submit"
                             label="Reset"
                         />
@@ -48,7 +54,7 @@ class Round extends Component {
                 ))}
             </>
         )
-    }
-}
+    };
+};
 
 export default Round;

@@ -1,21 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Champion from '../Champion';
 import Round from '../Round';
 
-class Tournament extends Component {
-
-    
-    render() {
-
-        return (
-                <Round />
-        );
-    };
-};
+const Tournament = ({ complete }) => (
+    <>
+    { complete ? <Champion/> : <Round /> }
+    </>
+);         
 
 export default Tournament;
 
-// const rounds = [];
-// for (let i = 1; i <= numberOfRounds; i += 1) {
-//     rounds.push(<Round roundNumber={ i }/>)
-// }
-// console.log(rounds);
