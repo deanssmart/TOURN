@@ -1,4 +1,4 @@
-//helper function to map ovet the players array and assign a gameID, the gameID increments after each pair are formed
+//helper function to map over the players array and assign a gameID, the gameID increments after each pair is formed
 
 export const addGameID = (players) => {
     let gameID = 0;

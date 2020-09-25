@@ -22,12 +22,13 @@ class Round extends Component {
         
         return (
 
-            //smart title to display 
+            //smart title to display either, quatqrfinal, semifinal, final or round number depending on what round is being played
             <>
                 {rounds.map((round, i) => (              
                     <article key={ i }>
                         <h2>{ i + 1 === totalRounds ? "Final" : i + 1 === (totalRounds - 1) ? "Semifinals" : i + 1 === (totalRounds - 2) ? "Quarterfinals" : `Round ${ i + 1 }`}</h2>         
                         <ul>
+                            {/* notes can be found in helper function folder */}
                             {gameArrayCreator(round).map((game, j) => 
                                 <Game 
                                     key={ j }
@@ -36,6 +37,7 @@ class Round extends Component {
                                 />
                             )}
                         </ul>
+                        {/* button disabled until all games in the round are complete */}
                         <Button
                             buttonClass="btn btn-success"
                             handleClick={ this.handleSubmitNextRound }

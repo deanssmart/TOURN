@@ -18,7 +18,7 @@ class Settings extends Component {
         this.setState({ player: e.currentTarget.value });
     };
 
-    //adds the player name to the global state players array
+    //adds the player name to the global state players array, doesnt allow empty inputs
     handleSubmitPlayer(e) {
         e.preventDefault();
         const { player } = this.state;

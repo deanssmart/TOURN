@@ -4,7 +4,7 @@ import { addGameID } from './helperFunctions/addGameID';
 
 
 
-//add players to the players array
+//adds players to the players array
 const addPlayer = (state, { player }) => {    
     return {
         ...state,
@@ -20,9 +20,9 @@ const addPlayer = (state, { player }) => {
     };
 };
 
-//
+//starts the tournament, helper function notes can be found in the helper function folder, players are shuffled then added to the rounds array, empties the players array ready for the intake of winners of each game
 const startTournament = (state, { players }) => {
-    let updateRounds = state.rounds.length !== 0 ? addGameID(players) : addGameID(shuffleArray(players));
+    let updateRounds = addGameID(shuffleArray(players));
     let totalRounds = Math.log2(players.length);
 
     return {
@@ -36,6 +36,7 @@ const startTournament = (state, { players }) => {
     };
 };
 
+//used if an incorrect number of players (i.e not a power of 2) are attempted to be submitted
 const playerNumberError = state => {
     return {
         ...state,
@@ -43,6 +44,7 @@ const playerNumberError = state => {
     };
 };
 
+//adds the player who won their game to the players array ready for the next round of games if all the rounds are complete the winning players name is passed to the champion property
 const playerWon = (state, { player, roundID }) => {
     return {
         ...state,
@@ -57,6 +59,7 @@ const playerWon = (state, { player, roundID }) => {
     };
 };
 
+//players who won their game are then added to the rounds array and the players array is emptied again, if all the rounds are complete the complete property becomes true and the tournament is over
 const nextRound = (state) => {
     let updateRounds = addGameID(state.players);
     let complete = state.roundsCompleted + 1 === state.totalRounds;
@@ -71,6 +74,7 @@ const nextRound = (state) => {
     };
 };
 
+//used to reset the global state to inital, to start a new tournament
 const reset = () => {
     return {
         ...initial,

@@ -1,4 +1,5 @@
-//This helper function splits a given array into chuncks of a given size, in the case of this app the size will be 2
+//helper function that splits a given array into chuncks of a given size, in the case of this app the size will be 2
+//not used in this app anymore but might be handy for another project
 
 export const chunkArray = (array, size) => {
     return array.reduce((chunks, current, i) => {
