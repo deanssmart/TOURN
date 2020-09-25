@@ -2,10 +2,12 @@ import initial from './initial';
 import { shuffleArray } from './helperFunctions/shuffleArray';
 import { addGameID } from './helperFunctions/addGameID';
 
+
 //add players to the players array
-const addPlayer = (state, { player }) => {
+const addPlayer = (state, { player }) => {    
     return {
         ...state,
+        playerNumberError: false,
         playerCounter: state.playerCounter + 1,
         players: [...state.players, 
             {
@@ -29,6 +31,14 @@ const startTournament = (state, { players }) => {
         totalRounds,
         tournamentStarted: true,
         playerCounter: initial.playerCounter,
+        playerNumberError: false,
+    };
+};
+
+const playerNumberError = state => {
+    return {
+        ...state,
+        playerNumberError: true,
     };
 };
 
@@ -71,6 +81,7 @@ const reducer = (state, action) => {
     switch (action.type) {
         case "ADD_PLAYER": return addPlayer(state, action);
         case "START_TOURNAMENT": return startTournament(state, action);
+        case "ERROR": return playerNumberError(state);
         case "PLAYER_WON": return playerWon(state, action);
         case "NEXT_ROUND": return nextRound(state);
         case "RESET": return reset();

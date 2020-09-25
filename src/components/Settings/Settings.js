@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Input from '../Input/Input';
 import Button from '../Button/Button';
+import { isPowerOf2 } from '../../data/helperFunctions/isPowerOf2';
 
 class Settings extends Component {
     constructor(props) {
@@ -32,7 +33,9 @@ class Settings extends Component {
 
     render() {
         const { player } = this.state;
-        const { players } = this.props;
+        const { players, playerNumberError } = this.props;
+
+        console.log(isPowerOf2(1));
 
         return (
             <>
@@ -45,6 +48,8 @@ class Settings extends Component {
                         value={player}
                         handleChange={this.handleChange}
                     />
+                    { playerNumberError ? 
+                    <p>Total number of players needs to be a power of 2 (i.e.2, 4, 8, 16, 32 ...) </p> : null }
                     <Button
                         label="Add"
                         buttonClass="btn btn-primary"

@@ -12,6 +12,12 @@ export const startTournament = (players) => {
     };
 };
 
+export const playerNumberError = () => {
+    return {
+        type: "ERROR",
+    };
+};
+
 export const playerWon = (player, roundID) => {
     return {
         player, 

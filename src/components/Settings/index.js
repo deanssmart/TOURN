@@ -3,7 +3,7 @@ import Settings from './Settings';
 import { addPlayer } from '../../data/actions/state';
 
 
-const mapStateToProps = ({ players }) => ({ players });
+const mapStateToProps = ({ players, playerNumberError }) => ({ players, playerNumberError });
 
 const mapDispatchToProps = dispatch => {
     return {

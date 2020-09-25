@@ -7,6 +7,7 @@ const initial = {
     roundsCompleted: 0,
     champion: "",
     complete: false,
+    playerNumberError: false,
   };
   
   export default initial;
