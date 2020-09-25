@@ -16,7 +16,17 @@ body {
     font-family: var(--baseFont);
     font-size: 1rem;
     font-weight: 400;
-    color: var(--appHighlight);
+    color: var(--appBlue);
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--appBlueHighlight);
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--appBlueHighlight);
 }
 
 
@@ -24,9 +34,9 @@ body {
     font-family: var(--specialFont);
     font-size: 12rem;
     font-weight: 800;
-    color: var(--appHiglight);
+    color: var(--appBlueHighlight);
     text-align: center;
-    filter: drop-shadow(2px 2px 20px var(--appHighlight));
+    filter: drop-shadow(2px 2px 20px var(--appBlueHighlight));
     -webkit-text-stroke: 4px var(--appBlue);
 
 }

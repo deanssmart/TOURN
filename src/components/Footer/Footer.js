@@ -15,14 +15,14 @@ const Footer = ({
         <div>
         { tournamentStarted ?    
             <Button
-                buttonClass="btn btn-danger"
+                buttonClass="button-yellow button-large"
                 handleClick={ handleReset }
                 type="submit"
                 label="New Tournament"
             />
             :
             <Button            
-                buttonClass="btn btn-success"
+                buttonClass="button-yellow button-large"
                 handleClick={ isPowerOf2(players.length) ? () => handleStartTournament(players) : handleError }
                 type="submit"
                 label="Start Tournament"

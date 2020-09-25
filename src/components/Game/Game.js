@@ -27,28 +27,30 @@ class Game extends Component {
         const { game } = this.props;
 
         return (
-            <section>
+            <section className="container-games">
                 <h3>{ `Game ${game.id}` }</h3>
                 <div>
-                    <Button 
-                        buttonClass="btn btn-primary"
-                        handleClick={() => this.handleP1Win(game.player1, game.roundID)}
-                        type="button"
-                        label="Won"
-                        disable={ winner !== 0 }
+                    <div className="container-player1">
+                        <Button 
+                            buttonClass="button-blue player"
+                            handleClick={() => this.handleP1Win(game.player1, game.roundID)}
+                            type="button"
+                            label="Won"
+                            disable={ winner !== 0 }
 
-                    />
-                    <p>{ game.player1 }</p>                    
-                </div>
-                <div>
-                    <Button 
-                        buttonClass="btn btn-danger"
-                        handleClick={() => this.handleP2Win(game.player2, game.roundID)}
-                        type="button"
-                        label="Won"
-                        disable={ winner !== 0 }
-                    />
-                    <p>{ game.player2 }</p>                    
+                        />
+                        <p className="player">{ game.player1 }</p>                    
+                    </div>
+                    <div className="container-player2">
+                        <Button 
+                            buttonClass="button-yellow player"
+                            handleClick={() => this.handleP2Win(game.player2, game.roundID)}
+                            type="button"
+                            label="Won"
+                            disable={ winner !== 0 }
+                        />
+                        <p className="player">{ game.player2 }</p>                    
+                    </div>
                 </div>
             </section>
         );

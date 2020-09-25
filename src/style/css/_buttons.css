@@ -1,0 +1,64 @@
+.button-blue {
+    border-radius: 50%;
+    border: 0.2rem var(--appBlue) solid;
+    text-align: center;
+    color: var(--appBlue);
+    background: transparent;
+    height: 5rem;
+    width: 5rem; 
+    transition: 0.1s ease-in-out;      
+}
+
+.button-blue:hover, .button-blue:focus  {
+    background-color: var(--appBlue);
+    color: var(--appBlack);  
+    -webkit-animation: pulse-blue 0.8s;
+    animation: pulse-blue 0.8s;
+    box-shadow: 0 0 0 1rem var(--appBlack);
+  }
+  @-webkit-keyframes pulse-blue {
+    0% {
+      box-shadow: 0 0 0 0 var(--appBlueHighlight);
+    }
+  }
+  
+  @keyframes pulse-blue {
+    0% {
+      box-shadow: 0 0 0 0 var(--appBlueHighlight);
+    }
+  }
+
+  .button-yellow {
+    border-radius: 50%;
+    border: 0.2rem var(--appYellow) solid;
+    text-align: center;
+    color: var(--appYellow);
+    background: transparent;
+    height: 5rem;
+    width: 5rem; 
+    transition: 0.1s ease-in-out;      
+}
+
+.button-yellow:hover, .button-yellow:focus  {
+    background-color: var(--appYellow);
+    color: var(--appBlack);  
+    -webkit-animation: pulse-yellow 0.8s;
+    animation: pulse-yellow 0.8s;
+    box-shadow: 0 0 0 1rem var(--appBlack);
+  }
+  @-webkit-keyframes pulse-yellow {
+    0% {
+      box-shadow: 0 0 0 0 var(--appYellowHighlight);
+    }
+  }
+  
+  @keyframes pulse-yellow {
+    0% {
+      box-shadow: 0 0 0 0 var(--appYellowHighlight);
+    }
+  }
+
+  .button-large {
+    height: 10rem;
+    width: 10rem; 
+  }

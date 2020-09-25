@@ -49,7 +49,7 @@ class Settings extends Component {
                     <p>Total number of players needs to be a power of 2 (i.e.2, 4, 8, 16, 32 ...) </p> : null }
                     <Button
                         label="Add"
-                        buttonClass="btn btn-primary"
+                        buttonClass="button-blue"
                         type="submit"
                     />
                 </form>

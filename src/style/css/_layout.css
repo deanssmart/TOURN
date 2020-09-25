@@ -1,0 +1,25 @@
+/* games */
+
+.container-games {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+/* .container-games-inner {
+    display: flex;
+} */
+
+.container-player1 {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.container-player2 {
+    display: flex;
+}
+
+.player {
+    align-self: center;
+    margin: 0 0.5rem;
+}

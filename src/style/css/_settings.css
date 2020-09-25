@@ -1,7 +1,9 @@
 :root {
 /* colours */
 --appBlue: #15abc3; 
---appHighlight: #19cde9;
+--appBlueHighlight: #19cde9;
+--appYellow: #fff00c;
+--appYellowHighlight: #fffab5;
 --appBlack: #000000;
 
 /* fonts */
@@ -11,5 +13,6 @@
 
 body {
     background-color: var(--appBlack);
+    cursor: crosshair;
 }
 
