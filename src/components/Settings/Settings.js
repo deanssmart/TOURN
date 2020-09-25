@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Input from '../Input/Input';
 import Button from '../Button/Button';
-import { isPowerOf2 } from '../../data/helperFunctions/isPowerOf2';
 
 class Settings extends Component {
     constructor(props) {

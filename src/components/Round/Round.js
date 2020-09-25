@@ -11,19 +11,22 @@ class Round extends Component {
 
     };
 
+    //passes the players who won their round from the players array to the rounds array 
     handleSubmitNextRound(e) {
         e.preventDefault();
         this.props.handleNextRound();
     };
 
     render() {
-        const { rounds, totalRounds } = this.props;
+        const { rounds, totalRounds, playerCounter } = this.props;
         
         return (
+
+            //smart title to display 
             <>
-            <h2>{ rounds.length === totalRounds ? "Final" : rounds.length === (totalRounds - 1) ? "Semifinals" : rounds.length === (totalRounds - 2) ? "Quarterfinals" : `Round ${ rounds.length }`}</h2>
-                {rounds.map((round, i) => (
-                    <article key={ i }>                        
+                {rounds.map((round, i) => (              
+                    <article key={ i }>
+                        <h2>{ i + 1 === totalRounds ? "Final" : i + 1 === (totalRounds - 1) ? "Semifinals" : i + 1 === (totalRounds - 2) ? "Quarterfinals" : `Round ${ i + 1 }`}</h2>         
                         <ul>
                             {gameArrayCreator(round).map((game, j) => 
                                 <Game 
@@ -37,7 +40,8 @@ class Round extends Component {
                             buttonClass="btn btn-success"
                             handleClick={ this.handleSubmitNextRound }
                             type="submit"
-                            label={ i + 1 === totalRounds ? 'Show the Tronmaster' : "Next Round" } 
+                            label={ i + 1 === totalRounds ? 'Show the Tronmaster' : "Next Round" }
+                            disable={ playerCounter !== (round.length / 2) } 
                         />
                     </article>                      
                 ))}
