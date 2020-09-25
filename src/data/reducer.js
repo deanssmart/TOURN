@@ -28,16 +28,19 @@ const startTournament = (state, { players }) => {
         rounds: [...state.rounds, updateRounds],
         totalRounds: Math.log2(players.length),
         tournamentStarted: true,
+        playerCounter: initial.playerCounter,
     };
 };
 
-const playerWon = (state, { player }) => {
+const playerWon = (state, { player, roundID }) => {
     return {
         ...state,
+        playerCounter: state.playerCounter + 1,
         players: [...state.players, 
         {
-            name: player.name,
-            roundID: player.roundID + 1,
+            playerID: state.playerCounter + 1,
+            name: player,
+            roundID: roundID + 1,
         }],
         champion: state.totalRounds === state.rounds.length ? player.name : null,
     };

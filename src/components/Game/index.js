@@ -6,7 +6,7 @@ const mapStateToProps = ({ players }) => ({ players });
 
 const mapDispatchToProps = dispatch => {
     return {
-        handleWin: (player) => dispatch(playerWon(player)),
+        handleWin: (player, roundID) => dispatch(playerWon(player, roundID)),
     };
 };
 

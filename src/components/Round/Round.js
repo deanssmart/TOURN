@@ -1,27 +1,44 @@
 import React, { Component } from "react";
 import Game from '../Game';
-import { matchCreater } from '../../data/helperFunctions/gameCreator';
+import { gameArrayCreater } from '../../data/helperFunctions/gameArrayCreator';
+import Button from "../Button/Button";
 
 class Round extends Component {
 
+    // handleSubmitWin(e) {
+    //     this.props.handleWin
+    // }
+
     render() {
-        const { rounds } = this.props;
+        const { rounds, totalRounds } = this.props;
         
         return (
             <>
-                {rounds.map((round, i ) => (
-                    <div>
+                {rounds.map((round, i) => (
+                    <article key={ i }>
                         <h2>{`Round ${ i + 1}`}</h2>
                         <ul>
-                            {matchCreater(round).map(game => 
+                            {gameArrayCreater(round).map((game, j) => 
                                 <Game 
-                                    key={ i }
+                                    key={ j }
                                     round={ round }
                                     game={ game }
                                 />
                             )}
                         </ul>
-                    </div>
+                        <Button
+                            buttonClass="btn btn-success"
+                            handleClick={ this.handleSubmitWin }
+                            type="submit"
+                            label={ i + 1 === totalRounds ? 'Choose the Tronmaster' : "Next Round" } 
+                        />
+                        <Button
+                            buttonClass="btn btn-danger"
+                            handleClick={ this.handleReset }
+                            type="submit"
+                            label="Reset"
+                        />
+                    </article>                      
                 ))}
             </>
         )
@@ -29,11 +46,3 @@ class Round extends Component {
 }
 
 export default Round;
-
-// { games.filter(game => game.round === roundNumber).map(game => (
-//     <Game
-//         key={ game.id }
-//         game={ game }
-//         // handleWin={ this.handle}
-//     />
-// )) }

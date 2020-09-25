@@ -11,16 +11,14 @@ class Game extends Component {
         this.handleP2Win = this.handleP2Win.bind(this);
     }
 
-    handleP1Win() {
-        this.props.handleWin();
-        this.setState({winner: 1});
-                
+    handleP1Win(player1, roundID) {
+        this.props.handleWin(player1, roundID);
+        this.setState({winner: 1});                
     }
 
-    handleP2Win() {
-        this.props.handleWin();
-        this.setState({winner: 2});
-        
+    handleP2Win(player2, roundID) {
+        this.props.handleWin(player2, roundID);
+        this.setState({winner: 2});        
     }
 
     // handleSubmitWin(e, player) {
@@ -30,43 +28,29 @@ class Game extends Component {
 
     render() {
         const { game, round } = this.props;
-        // const player1 = players.find(player => player.id === game.p1);
-        // const player2 = players.find(player => player.id === game.p2);
 
         return (
-            <article>
+            <section>
                 <h3>{ `Game ${game.id}` }</h3>
                 <div>
                 <Button 
                     buttonClass="btn btn-primary"
-                    handleClick={this.handleP1Win}
+                    handleClick={() => this.handleP1Win(game.player1, game.roundID)}
                     type="button"
                     label="Won"
                 />
-                <p>{ game.name }</p>                    
+                <p>{ game.player1 }</p>                    
                 </div>
                 <div>
                 <Button 
                     buttonClass="btn btn-danger"
-                    handleClick={this.handleP2Win}
+                    handleClick={() => this.handleP2Win(game.player2, game.roundID)}
                     type="button"
                     label="Won"
                 />
-                <p>{ game.name }</p>                    
+                <p>{ game.player2 }</p>                    
                 </div>
-                 {/* {
-                    players.map(player => (
-                        <div key={ player.id }>
-                            <Button 
-                                buttonClass="btn btn-primary"
-                                handleClick={(e) => this.handleSubmitWin(e, player)}
-                                type="submit"
-                                label="Won"
-                            />
-                            <p>{ player.name }</p>
-                        </div>
-                ))}  */}
-            </article>
+            </section>
         );
     };
 };
