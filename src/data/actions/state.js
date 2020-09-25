@@ -20,9 +20,8 @@ export const playerWon = (player, roundID) => {
     };
 };
 
-export const nextRound = (players) => {
+export const nextRound = () => {
     return {
-        players,
         type: "NEXT_ROUND",
     };
 };

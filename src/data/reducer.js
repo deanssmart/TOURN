@@ -46,8 +46,8 @@ const playerWon = (state, { player, roundID }) => {
     };
 };
 
-const nextRound = (state, { players }) => {
-    let updateRounds = addGameID(players);
+const nextRound = (state) => {
+    let updateRounds = addGameID(state.players);
     let final = state.roundsCompleted + 1 === state.totalRounds;
 
     return {
@@ -71,7 +71,7 @@ const reducer = (state, action) => {
         case "ADD_PLAYER": return addPlayer(state, action);
         case "START_TOURNAMENT": return startTournament(state, action);
         case "PLAYER_WON": return playerWon(state, action);
-        case "NEXT_ROUND": return nextRound(state, action);
+        case "NEXT_ROUND": return nextRound(state);
         case "RESET": return reset();
         default: return state;
     };

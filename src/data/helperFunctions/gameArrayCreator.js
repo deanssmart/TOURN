@@ -1,6 +1,6 @@
 //reduce iterator method to create a new array of games based on the gameID of the player, if the current player gameID matches the previous player gameID a game object is created with the two players, the current roundID and a new gameID (which increments on each iteration)
 
-export const gameArrayCreater = (players) => {
+export const gameArrayCreator = (players) => {
 	let gameID = 1;
 	let previousGame = {};
 	return players.reduce((games, current) => {

@@ -1,13 +1,19 @@
 import React, { Component } from "react";
 import Game from '../Game';
-import { gameArrayCreater } from '../../data/helperFunctions/gameArrayCreator';
+import { gameArrayCreator } from '../../data/helperFunctions/gameArrayCreator';
 import Button from "../Button/Button";
 
 class Round extends Component {
+    constructor(props) {
+        super(props);
 
-    // handleSubmitWin(e) {
-    //     this.props.handleWin
-    // }
+        this.handleSubmitNextRound = this.handleSubmitNextRound.bind(this);
+    }
+
+    handleSubmitNextRound(e) {
+        e.preventDefault();
+        this.props.handleNextRound();
+    }
 
     render() {
         const { rounds, totalRounds } = this.props;
@@ -18,7 +24,7 @@ class Round extends Component {
                     <article key={ i }>
                         <h2>{`Round ${ i + 1}`}</h2>
                         <ul>
-                            {gameArrayCreater(round).map((game, j) => 
+                            {gameArrayCreator(round).map((game, j) => 
                                 <Game 
                                     key={ j }
                                     round={ round }
@@ -28,7 +34,7 @@ class Round extends Component {
                         </ul>
                         <Button
                             buttonClass="btn btn-success"
-                            handleClick={ this.handleSubmitWin }
+                            handleClick={ this.handleSubmitNextRound }
                             type="submit"
                             label={ i + 1 === totalRounds ? 'Choose the Tronmaster' : "Next Round" } 
                         />
