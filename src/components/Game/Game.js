@@ -24,32 +24,33 @@ class Game extends Component {
 
     render() {
         const { winner } = this.state;
-        const { game } = this.props;
+        const { game, totalRounds } = this.props;
 
+        console.log(game);
         return (
             <section className="container-games">
-                <h3 className="game-component">{ `Game ${game.id}` }</h3>
+                <h3 className="game-component">{ game.roundID === totalRounds ? "This is it..." : `Game ${game.id}`}</h3>
                 <div className="container-games">
                     <div className="container-player">
                         <Button 
-                            buttonClass="button-blue game-component"
+                            buttonClass={(winner === 1 ? "animated-" : "") + "button-blue game-component-blue"}
                             handleClick={() => this.handleP1Win(game.player1, game.roundID)}
                             type="button"
                             label="Won"
                             disable={ winner !== 0 }
 
                         />
-                        <p className="game-component">{ game.player1 }</p>                    
+                        <p className="game-component-blue">{ game.player1 }</p>                    
                     </div>
                     <div className="container-player">
                         <Button 
-                            buttonClass="button-yellow game-component"
+                            buttonClass={(winner === 2 ? "animated-" : "") + "button-yellow game-component-yellow"}
                             handleClick={() => this.handleP2Win(game.player2, game.roundID)}
                             type="button"
                             label="Won"
                             disable={ winner !== 0 }
                         />
-                        <p className="game-component">{ game.player2 }</p>                    
+                        <p className="game-component-yellow">{ game.player2 }</p>                    
                     </div>
                 </div>
             </section>
