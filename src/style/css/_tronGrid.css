@@ -1,4 +1,4 @@
-.grid-container { width: 100%; position: absolute; bottom: 0; left: 0; z-index: -1; }
+.grid-container { width: 100%; position: fixed; bottom: 0; left: 0; z-index: -1; }
 
 .grid-container:after { 
   -webkit-mask-image: -webkit-gradient(linear, left 90%, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));

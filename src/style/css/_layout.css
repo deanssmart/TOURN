@@ -1,25 +1,24 @@
+/* rounds */
+
+.container-rounds {
+    display: flex;
+}
+
+
 /* games */
 
 .container-games {
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem 0;
+    display: grid;
+    gap: 1rem;
 }
 
-/* .container-games-inner {
-    display: flex;
-} */
 
-.container-player1 {
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-.container-player2 {
+.container-player {
     display: flex;
 }
 
-.player {
+
+.game-component {
     align-self: center;
     margin: 0 0.5rem;
 }

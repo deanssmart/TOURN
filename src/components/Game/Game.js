@@ -28,28 +28,28 @@ class Game extends Component {
 
         return (
             <section className="container-games">
-                <h3>{ `Game ${game.id}` }</h3>
-                <div>
-                    <div className="container-player1">
+                <h3 className="game-component">{ `Game ${game.id}` }</h3>
+                <div className="container-games">
+                    <div className="container-player">
                         <Button 
-                            buttonClass="button-blue player"
+                            buttonClass="button-blue game-component"
                             handleClick={() => this.handleP1Win(game.player1, game.roundID)}
                             type="button"
                             label="Won"
                             disable={ winner !== 0 }
 
                         />
-                        <p className="player">{ game.player1 }</p>                    
+                        <p className="game-component">{ game.player1 }</p>                    
                     </div>
-                    <div className="container-player2">
+                    <div className="container-player">
                         <Button 
-                            buttonClass="button-yellow player"
+                            buttonClass="button-yellow game-component"
                             handleClick={() => this.handleP2Win(game.player2, game.roundID)}
                             type="button"
                             label="Won"
                             disable={ winner !== 0 }
                         />
-                        <p className="player">{ game.player2 }</p>                    
+                        <p className="game-component">{ game.player2 }</p>                    
                     </div>
                 </div>
             </section>

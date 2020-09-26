@@ -23,7 +23,7 @@ class Round extends Component {
         return (
 
             //smart title to display either, quatqrfinal, semifinal, final or round number depending on what round is being played
-            <>
+            <div className="container-rounds">
                 {rounds.map((round, i) => (              
                     <article key={ i }>
                         <h2>{ i + 1 === totalRounds ? "Final" : i + 1 === (totalRounds - 1) ? "Semifinals" : i + 1 === (totalRounds - 2) ? "Quarterfinals" : `Round ${ i + 1 }`}</h2>         
@@ -47,7 +47,7 @@ class Round extends Component {
                         />
                     </article>                      
                 ))}
-            </>
+            </div>
         );
     };
 };
