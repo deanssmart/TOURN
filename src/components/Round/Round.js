@@ -26,7 +26,7 @@ class Round extends Component {
             <div className="container-rounds">
                 {rounds.map((round, i) => (              
                     <article key={ i }>
-                        <h2>{ i + 1 === totalRounds ? "Final" : i + 1 === (totalRounds - 1) ? "Semifinals" : i + 1 === (totalRounds - 2) ? "Quarterfinals" : `Round ${ i + 1 }`}</h2>         
+                        <h2>{ i + 1 === totalRounds ? "Final" : i + 1 === (totalRounds - 1) ? "Semifinals" : i + 1 === (totalRounds - 2) ? "1/4 Finals" : `Round ${ i + 1 }`}</h2>         
                         <ul>
                             {/* notes can be found in helper function folder */}
                             {gameArrayCreator(round).map((game, j) => 

@@ -21,5 +21,7 @@ input:focus {
 label {
     font-size: 2rem;
     color: var(--appYellow);
+    padding: 1rem;
 }
+
   

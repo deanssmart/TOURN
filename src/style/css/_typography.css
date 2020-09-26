@@ -22,6 +22,7 @@ body {
 h2 {
     font-size: 2rem;
     color: var(--appYellow);
+    padding: 2rem 0 0.5rem 0;
 }
 
 h3 {
@@ -38,7 +39,14 @@ h3 {
     text-align: center;
     filter: drop-shadow(2px 2px 20px var(--appBlueHighlight));
     -webkit-text-stroke: 4px var(--appBlue);
+}
 
+@media (max-width: 750px) {
+    .title {
+        font-size: 25vw;
+        filter: drop-shadow(2px 2px 2vw var(--appBlueHighlight));
+    -webkit-text-stroke: 0.5vw var(--appBlue);
+    }
 }
 
 /* .title:hover {
