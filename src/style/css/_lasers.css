@@ -1,0 +1,84 @@
+  .laser-beam {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    width: 3px;
+    height: 500%;
+    background: var(--appBlue);
+    -webkit-box-shadow: 0px 0px 15px 0px var(--appBlueHighlight);
+    -moz-box-shadow: 0px 0px 15px 0px var(--appBlueHighlight);
+    box-shadow: 0px 0px 15px 0px var(--appBlueHighlight);
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-animation: laser 7s infinite;
+    animation: laser 7s infinite;
+  }
+  .laser-beam.yellow {
+    -webkit-animation: laser 7.5s infinite;
+    animation: laser 7.5s infinite;
+    background: var(--appYellow);
+    -webkit-box-shadow: 0px 0px 15px 0px var(--appYellowHighlight);
+    -moz-box-shadow: 0px 0px 15px 0px var(--appYellowHighlight);
+    box-shadow: 0px 0px 15px 0px var(--appYellowHighlight);
+  }
+  .laser-beam.blue-b {
+    -webkit-animation: laser 7.3s infinite;
+    animation: laser 7.3s infinite;
+    background: var(--appBlue);
+    -webkit-box-shadow: 0px 0px 15px 0px var(--appBlueHighlight);
+    -moz-box-shadow: 0px 0px 15px 0px var(--appBlueHighlight);
+    box-shadow: 0px 0px 15px 0px var(--appBlueHighlight);
+  }
+  .laser-beam.yellow-b {
+    -webkit-animation: laser 7.7s infinite;
+    animation: laser 7.7s infinite;
+    background: var(--appYellow);
+    -webkit-box-shadow: 0px 0px 15px 0px var(--appYellowHighlight);
+    -moz-box-shadow: 0px 0px 15px 0px var(--appYellowHighlight);
+    box-shadow: 0px 0px 15px 0px var(--appYellowHighlight);
+  }
+  
+  @-webkit-keyframes laser {
+    0% {
+      -moz-transform: rotate(-75deg);
+      -ms-transform: rotate(-75deg);
+      -webkit-transform: rotate(-75deg);
+      transform: rotate(-75deg);
+    }
+    50% {
+      -moz-transform: rotate(75deg);
+      -ms-transform: rotate(75deg);
+      -webkit-transform: rotate(75deg);
+      transform: rotate(75deg);
+    }
+    100% {
+      -moz-transform: rotate(-75deg);
+      -ms-transform: rotate(-75deg);
+      -webkit-transform: rotate(-75deg);
+      transform: rotate(-75deg);
+    }
+  }
+
+  @keyframes laser {
+    0% {
+      -moz-transform: rotate(-75deg);
+      -ms-transform: rotate(-75deg);
+      -webkit-transform: rotate(-75deg);
+      transform: rotate(-75deg);
+    }
+    50% {
+      -moz-transform: rotate(75deg);
+      -ms-transform: rotate(75deg);
+      -webkit-transform: rotate(75deg);
+      transform: rotate(75deg);
+    }
+    100% {
+      -moz-transform: rotate(-75deg);
+      -ms-transform: rotate(-75deg);
+      -webkit-transform: rotate(-75deg);
+      transform: rotate(-75deg);
+    }
+  }
+  
