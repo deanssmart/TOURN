@@ -19,3 +19,7 @@
     color: var(--appBlue);
 }
 
+.disabled-game-component {
+    filter: brightness(40%);
+}
+

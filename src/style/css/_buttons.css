@@ -25,6 +25,10 @@
     filter: brightness(130%);
   }
 
+.disabled-button-blue {
+    filter: brightness(40%);
+}
+
 
 .animated-button-blue {
     border: none;
@@ -229,6 +233,9 @@
     filter: brightness(130%);
   }
 
+.disabled-button-yellow {
+    filter: brightness(40%);
+}
 
 .animated-button-yellow {
     border: none;
@@ -405,6 +412,7 @@
   .animated-button-yellow:focus {
       outline: 1px solid;  
   }
+
 
 
 /* .button-yellow {

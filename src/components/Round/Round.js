@@ -39,10 +39,10 @@ class Round extends Component {
                         </ul>
                         {/* button disabled until all games in the round are complete */}
                         <Button
-                            buttonClass="btn btn-success"
+                            buttonClass={ (playerCounter === (round.length / 2) ?"animated-" : "") + "button-blue game-component-blue"}
                             handleClick={ this.handleSubmitNextRound }
                             type="submit"
-                            label={ i + 1 === totalRounds ? 'Show the Tronmaster' : "Next Round" }
+                            label={ i + 1 === totalRounds ? 'Tournament Master' : "Next Round" }
                             disable={ playerCounter !== (round.length / 2) } 
                         />
                     </article>                      
