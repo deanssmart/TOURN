@@ -13,7 +13,7 @@ const Footer = ({
 
     //button at footer of page changes from start tournament to new tournament once the tournament has begun
     //when starting a new tournament a check is made to ensure the number of playes is valid (i.e a power of 2)
-        <div>
+        <div className="footer">
         { tournamentStarted ?    
             <Button
                 buttonClass={complete ? "animated-button-blue" : "button-blue"}

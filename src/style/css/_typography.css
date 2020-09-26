@@ -41,26 +41,38 @@ h3 {
     -webkit-text-stroke: 4px var(--appBlue);
 }
 
+.champion {
+    font-family: var(--specialFont);
+    font-size: 6rem;
+    font-weight: 500;
+    color: var(--appYellow);
+    text-align: center;
+    filter: drop-shadow(2px 2px 20px var(--appYellowHighlight));
+    -webkit-text-stroke: 4px var(--appYellow);
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
 @media (max-width: 750px) {
     .title {
         font-size: 25vw;
         filter: drop-shadow(2px 2px 2vw var(--appBlueHighlight));
         -webkit-text-stroke: 0.5vw var(--appBlue);
     }
+    .champion {
+        font-size: 15vw;
+        filter: drop-shadow(2px 2px 2vw var(--appYellowHighlight));
+        -webkit-text-stroke: 0.5vw var(--appYellow);
+    }
 }
 
-/* .title:hover {
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate;
-}
-
-  @keyframes glow {
+  /* @keyframes glow {
     from {
-      text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 9px var(--appBlue), 0 0 12px var(--appBlue), 0 0 15px var(--appBlue), 0 0 18px var(--appBlue), 0 0 21px var(--appBlue);
+      text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 9px var(--appYellow), 0 0 12px var(--appYellow), 0 0 15px var(--appYellow), 0 0 18px var(--appYellow), 0 0 21px var(--appYellow);
     }
     
     to {
-      text-shadow: 0 0 3px #fff, 0 0 6px var(--appBlue), 0 0 9px var(--appBlue), 0 0 12px var(--appBlue), 0 0 15px var(--appBlue), 0 0 18px var(--appBlue), 0 0 21px var(--appBlue);
+      text-shadow: 0 0 3px #fff, 0 0 6px var(--appYellow), 0 0 9px var(--appYellow), 0 0 12px var(--appYellow), 0 0 15px var(--appYellow), 0 0 18px var(--appYellow), 0 0 21px var(--appYellow);
     }
-  } */
+  }  */
