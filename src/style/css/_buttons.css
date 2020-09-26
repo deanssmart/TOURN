@@ -1,3 +1,5 @@
+/* adapted css buttons from CodePen Home Alex Bodin https://codepen.io/Alexb98/pen/XWrqpxB */
+
 .button-blue {
     border: 1px var(--appBlueHighlight) solid;
     background: linear-gradient(-30deg, #0b1b3d 50%, #08142b 50%);
@@ -412,69 +414,27 @@
       outline: 1px solid;  
   }
 
+  .sound-button {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        border-radius: 50%;
+        border: 1px var(--appBlue) solid;
+        font-size: 1rem;
+        text-align: center;
+        color: var(--appBlueHighlight);
+        height: 2.5rem;
+        width: 2.5rem;
+        background: transparent;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        box-shadow: 0 5px 13, 5, 83;
+        outline: none;
+  }
 
-
-/* .button-yellow {
-    border-radius: 50%;
-    border: 0.2rem var(--appyellow) solid;
-    text-align: center;
-    color: var(--appyellow);
-    background: transparent;
-    height: 5rem;
-    width: 5rem; 
-    transition: 0.1s ease-in-out;      
+  .sound-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--appBlueHighlight);
 }
 
-.button-yellow:hover, .button-yellow:focus  {
-    background-color: var(--appyellow);
-    color: var(--appBlack);  
-    -webkit-animation: pulse-yellow 0.8s;
-    animation: pulse-yellow 0.8s;
-    box-shadow: 0 0 0 1rem var(--appBlack);
-  }
-  @-webkit-keyframes pulse-yellow {
-    0% {
-      box-shadow: 0 0 0 0 Y
-    }
-  }
-  
-  @keyframes pulse-yellow {
-    0% {
-      box-shadow: 0 0 0 0 Y
-    }
-  }
 
-  .button-yellow {
-    border-radius: 50%;
-    border: 0.2rem var(--appYellow) solid;
-    text-align: center;
-    color: var(--appYellow);
-    background: transparent;
-    height: 5rem;
-    width: 5rem; 
-    transition: 0.1s ease-in-out;      
-}
-
-.button-yellow:hover, .button-yellow:focus  {
-    background-color: var(--appYellow);
-    color: var(--appBlack);  
-    -webkit-animation: pulse-yellow 0.8s;
-    animation: pulse-yellow 0.8s;
-    box-shadow: 0 0 0 1rem var(--appBlack);
-  }
-  @-webkit-keyframes pulse-yellow {
-    0% {
-      box-shadow: 0 0 0 0 Y
-    }
-  }
-  
-  @keyframes pulse-yellow {
-    0% {
-      box-shadow: 0 0 0 0 Y
-    }
-  }
-
-  .button-large {
-    height: 10rem;
-    width: 10rem; 
-  } */

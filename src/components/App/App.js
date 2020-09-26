@@ -4,6 +4,7 @@ import Header from '../Header/Header';
 import Settings from '../Settings';
 import Tournament from '../Tournament';
 import Footer from '../Footer';
+import Music from '../Music/Music';
 
 const App = ({ tournamentStarted }) => (
   <>
@@ -12,6 +13,7 @@ const App = ({ tournamentStarted }) => (
     <Tournament />    
   }
   <Footer />
+  <Music />
   </>
 );
 

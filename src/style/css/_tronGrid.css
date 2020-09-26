@@ -1,3 +1,5 @@
+/* adapted tron style grid css from CodePen Joah Gerstenberg https://codepen.io/JoahG/pen/QJQdJB */
+
 .grid-container { width: 100%; position: fixed; bottom: 0; left: 0; z-index: -1; }
 
 .grid-container:after { 

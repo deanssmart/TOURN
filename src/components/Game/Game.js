@@ -11,16 +11,22 @@ class Game extends Component {
         this.handleP2Win = this.handleP2Win.bind(this);
     }
 
-    //passes the clicked player to the players array ready for the next round
+    //passes the clicked player to the players array ready for the next round, plays a sound effect
     handleP1Win(player1, roundID) {
+        const audio = new Audio();
+        audio.src = '/assets/sounds/shortBikeTurn.m4a';
+        audio.play();
         this.props.handleWin(player1, roundID);
         this.setState({winner: 1});                
-    }
+    };
 
     handleP2Win(player2, roundID) {
+        const audio = new Audio();
+        audio.src = '/assets/sounds/shortBikeTurn.m4a';
+        audio.play();
         this.props.handleWin(player2, roundID);
         this.setState({winner: 2});        
-    }
+    };
 
     render() {
         const { winner } = this.state;

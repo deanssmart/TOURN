@@ -34,7 +34,7 @@ h3 {
 .title {
     font-family: var(--specialFont);
     font-size: 12rem;
-    font-weight: 800;
+    font-weight: 500;
     color: var(--appBlueHighlight);
     text-align: center;
     filter: drop-shadow(2px 2px 20px var(--appBlueHighlight));
@@ -45,7 +45,7 @@ h3 {
     .title {
         font-size: 25vw;
         filter: drop-shadow(2px 2px 2vw var(--appBlueHighlight));
-    -webkit-text-stroke: 0.5vw var(--appBlue);
+        -webkit-text-stroke: 0.5vw var(--appBlue);
     }
 }
 
