@@ -21,14 +21,13 @@
     outline: 2px solid;  
 }
 
-.button-blue:hover {
+.button-blue:hover:enabled {
     filter: brightness(130%);
   }
 
 .disabled-button-blue {
     filter: brightness(40%);
 }
-
 
 .animated-button-blue {
     border: none;
@@ -62,7 +61,7 @@
     transition: .2s opacity ease-in-out;
   }
   
-  .animated-button-blue:hover::before {
+  .animated-button-blue:hover::before:enabled {
     opacity: 0.2;
   }
   
@@ -229,7 +228,7 @@
     outline: 2px solid;  
 }
 
-.button-yellow:hover {
+.button-yellow:hover:enabled {
     filter: brightness(130%);
   }
 
@@ -269,7 +268,7 @@
     transition: .2s opacity ease-in-out;
   }
   
-  .animated-button-yellow:hover::before {
+  .animated-button-yellow:hover::before:enabled {
     opacity: 0.2;
   }
   
