@@ -1,5 +1,4 @@
 import React from "react";
-import '../../style/css/App.css';
 
 const Input = ({ 
     label, 
@@ -9,10 +8,9 @@ const Input = ({
     handleChange, 
     className }) => (
         
-  <div className="form-group">
+  <div className="form-group container-form">
     <label htmlFor={name}>{label}</label>
     <input
-      className="form-control"
       id={name}
       name={name}
       type={type}

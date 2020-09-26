@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import Footer from './Footer';
 import { reset, startTournament, playerNumberError } from '../../data/actions/state';
 
-const mapStateToProps = ({ tournamentStarted, players }) => ({ tournamentStarted, players });
+const mapStateToProps = ({ tournamentStarted, players, complete }) => ({ tournamentStarted, players, complete });
 
 const mapDispatchToProps = dispatch => {
     return {

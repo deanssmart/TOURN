@@ -1,0 +1,4 @@
+.container-rounds {
+    display: flex;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,13 @@
+.container-games {
+    display: grid;
+    gap: 1rem;
+}
+
+.container-player {
+    display: flex;
+}
+
+.game-component {
+    align-self: center;
+    margin: 0 0.5rem;
+}

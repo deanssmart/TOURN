@@ -16,17 +16,17 @@ body {
     font-family: var(--baseFont);
     font-size: 1rem;
     font-weight: 400;
-    color: var(--appBlue);
+    color: var(--appBlueHighlight);
 }
 
 h2 {
     font-size: 2rem;
-    color: var(--appBlueHighlight);
+    color: var(--appYellow);
 }
 
 h3 {
     font-size: 1.5rem;
-    color: var(--appBlueHighlight);
+    color: var(--appBlue);
 }
 
 

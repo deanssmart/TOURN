@@ -36,10 +36,9 @@ class Settings extends Component {
 
         return (
             <>
-                <form onSubmit={this.handleSubmitPlayer} className="form-group">
-                    <h2>Add a Player</h2>
+                <form onSubmit={this.handleSubmitPlayer} className="form-group container-form">
                     <Input
-                        label="Name"
+                        label="Add a Player"
                         name="playerName"
                         type="text"
                         value={player}
