@@ -2,7 +2,7 @@
 
 ### DevelopMe Coding Fellowship Technical Challenge (2020)
 
-(./public/assets/images/TOURN-Preview.JPG)
+![app preview](.public/assets/images/TOURN-Preview.JPG)
 
 ### View the app online 
 
