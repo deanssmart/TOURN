@@ -14,6 +14,7 @@ class Music extends Component {
 
     };
 
+    //music auto plays if the user has the option turned on otherwise the will need to 
     componentDidMount() {
         const { music } = this.state;
         music.load();

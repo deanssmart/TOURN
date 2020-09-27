@@ -12,6 +12,7 @@ class Footer extends Component {
     
     };
     
+    //used to reset global state to initial, plays sound
     handleResetSubmit(e) {
         e.preventDefault();
         const audio = new Audio();
@@ -21,6 +22,7 @@ class Footer extends Component {
         this.props.handleReset();
     };
 
+    //used to start the tournament, plays sound
     handleStartTournamentSubmit(e) {
         e.preventDefault();
         const { players } = this.props;
@@ -31,6 +33,7 @@ class Footer extends Component {
         this.props.handleStartTournament(players);
     };
 
+    //used to handle error if user tries to start tournament without the correct number of players
     handleErrorSubmit(e) {
         e.preventDefault();
         const audio = new Audio();
@@ -44,7 +47,7 @@ class Footer extends Component {
         const { tournamentStarted, players, complete } = this.props;
 
         //button at footer of page changes from start tournament to new tournament once the tournament has begun
-        //when starting a new tournament a check is made to ensure the number of playes is valid (i.e a power of 2)
+        //when starting a new tournament a check is made to ensure the number of players is valid (i.e a power of 2)
         return (
             <div className="footer">
             { tournamentStarted ?    
