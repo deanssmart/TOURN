@@ -9,9 +9,7 @@ import Music from '../Music/Music';
 const App = ({ tournamentStarted }) => (
   <>
   <Header />
-  { !tournamentStarted ? <Settings /> :
-    <Tournament />    
-  }
+  { !tournamentStarted ? <Settings /> : <Tournament /> }
   <Footer />
   <Music />
   </>

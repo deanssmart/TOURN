@@ -15,10 +15,12 @@ const Button = ({
     disabled={ disable } 
   >
     {label}
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
+
+    {/* spans for css effect*/}
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
   </button>
 
 );

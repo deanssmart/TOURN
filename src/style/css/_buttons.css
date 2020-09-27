@@ -27,6 +27,7 @@
     filter: brightness(130%);
   }
 
+  /* had to create a disabled button class rather than use the :disabled selector a the logic of the app disables both buttons when someone wins */
 .disabled-button-blue {
     filter: brightness(40%);
 }

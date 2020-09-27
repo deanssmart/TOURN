@@ -11,7 +11,7 @@ class Round extends Component {
 
     };
 
-    //passes the players who won their round from the players array to the rounds array 
+    //passes the players who won their round from the players array to the rounds array, plays sound effect depending on if its the last round or normal round  
     handleSubmitNextRound(e, i) {
         e.preventDefault();
         const { totalRounds } = this.props;

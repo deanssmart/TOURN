@@ -9,7 +9,7 @@ class Game extends Component {
 
         this.handleP1Win = this.handleP1Win.bind(this);
         this.handleP2Win = this.handleP2Win.bind(this);
-    }
+    };
 
     //passes the clicked player to the players array ready for the next round, plays a sound effect
     handleP1Win(player1, roundID) {
@@ -32,6 +32,7 @@ class Game extends Component {
         const { winner } = this.state;
         const { game, totalRounds } = this.props;
 
+        //css applied to highlight winners of each game
         return (
             <section className="container-games">
                 <h3 className="game-component">{ game.roundID === totalRounds ? "This is it..." : `Game ${game.id}`}</h3>

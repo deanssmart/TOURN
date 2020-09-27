@@ -12,7 +12,7 @@ class Footer extends Component {
     
     };
     
-    //used to reset global state to initial, plays sound
+    //used to reset global state to initial, plays a sound effect
     handleResetSubmit(e) {
         e.preventDefault();
         const audio = new Audio();
@@ -22,7 +22,7 @@ class Footer extends Component {
         this.props.handleReset();
     };
 
-    //used to start the tournament, plays sound
+    //used to start the tournament, plays a sound effect
     handleStartTournamentSubmit(e) {
         e.preventDefault();
         const { players } = this.props;
@@ -33,7 +33,7 @@ class Footer extends Component {
         this.props.handleStartTournament(players);
     };
 
-    //used to handle error if user tries to start tournament without the correct number of players
+    //used to handle error if user tries to start tournament without the correct number of players, plays a sound effect
     handleErrorSubmit(e) {
         e.preventDefault();
         const audio = new Audio();
@@ -41,7 +41,7 @@ class Footer extends Component {
         audio.play();
         
         this.props.handleError();
-    }
+    };
 
     render() {
         const { tournamentStarted, players, complete } = this.props;

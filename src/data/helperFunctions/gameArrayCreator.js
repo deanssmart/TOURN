@@ -9,7 +9,7 @@ export const gameArrayCreator = (players) => {
 				id: gameID,
 				player1: previousGame.name,
 				player2: current.name,
-				roundID: current.roundID
+				roundID: current.roundID,
 			})
 			gameID += 1
 		}

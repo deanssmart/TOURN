@@ -8,18 +8,18 @@ class Music extends Component {
         this.state = {
             musicPlaying: true,
             music: new Audio('/assets/sounds/SearchingForYou-WhiteHex.mp3'),
-        }
+        };
 
         this.handleToggle = this.handleToggle.bind(this);
 
     };
 
-    //music auto plays if the user has the option turned on otherwise the will need to 
+    //music auto plays if the user has the option turned on otherwise the will need to press the sound button
     componentDidMount() {
         const { music } = this.state;
         music.load();
         music.autoplay = true;
-    }
+    };
 
     handleToggle() {
         const { music, musicPlaying } = this.state;
@@ -45,9 +45,9 @@ class Music extends Component {
                 label={musicPlaying ? "🔈" : "🔊"}
             />
             </>
-        )
-    }
-}
+        );
+    };
+};
 
 export default Music;
 

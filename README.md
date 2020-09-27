@@ -1,68 +1,89 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# TOURN
 
-## Available Scripts
+### DevelopMe Coding Fellowship Technical Challenge (2020)
 
-In the project directory, you can run:
+(./public/assets/images/TOURN-Preview.JPG)
 
-### `npm start`
+### View the app online 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open the live app in your browser with this link:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Intro
 
-### `npm test`
+Tron(esque) themed app which randomly creates pairings for a tournament bracket from a list of names collected from the user. 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Technologies
 
-### `npm run build`
+- JavaScript
+- React
+- Redux
+- JSX
+- HTML/CSS
+- Git (version managed)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Functionality and Features
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- User input player names
+- Player number validation
+- Random pairing generator
+- Play multiple rounds
+- Intellegent round names
+- Ability to reset
+- Awesome sound effect and theme song 👍
+- Option to turn off theme song 👎
+- A nod to Tron and the 80's 🕹️
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### How to Use
 
-### `npm run eject`
+- Enter a player name and click 'ADD'
+- Keep doing this until you have the desired number of players (needs to be a power of 2 i.e 2, 4, 8, 16... etc)
+- Click 'START TOURNAMENT'
+- You can click 'NEW TOURNAMENT' at any point to reset the app
+- For each game click the 'WON' button for the winning player
+- Once all games are complete click 'NEXT ROUND'
+- Continue until the final round where the tournament master is decided
+- Click the 'TOURNAMENT MASTER' button and revel in the glory if it was you that won 🏆
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Setup on your machine
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Create a local directory on your machine 
+2. Run the following code in your command line to navigate into that directory:   
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```shell 
+$ cd ~/your-directory-name-here
+```
+3. Copy the SSH key from this GitHub repository `git@github.com:deanssmart/deanssmart-pingpong-tournament.git`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+4. Run the following code in your command line to clone the repo to your machine (you can change the app-name to what you desire):  
 
-## Learn More
+```shell 
+git clone git@github.com:deanssmart/deanssmart-pingpong-tournament.git <app-name>
+```
+5. Navigate to your new app directory (the app name you just picked):
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```shell 
+$ cd app-name
+```
+6. Install the dependencies:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```shell 
+npm i
+```
+7. Run the following command to launch the app in your default browser at http://localhost:3000/:
 
-### Code Splitting
+```shell 
+npm start
+```
+8. Enjoy
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Credits
 
-### Analyzing the Bundle Size
+### Sounds
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- Effects from Zapsplat.com
+- Music 'Searching For You' by WhiteHex from from YouTube Audio Library
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### CSS 
+- Adapted buttons from CodePen Home Alex Bodin https://codepen.io/Alexb98/pen/XWrqpxB 
+- Adapted lasers from Evolution codepen https://codepen.io/Evolution/pen/auLlw
+- Adapted tron style grid from CodePen Joah Gerstenberg https://codepen.io/JoahG/pen/QJQdJB
