@@ -42,7 +42,7 @@ class Music extends Component {
                 buttonClass="sound-button"
                 handleClick={ this.handleToggle }
                 type="button"
-                label={musicPlaying ? "🔈" : "🔊"}
+                label={musicPlaying ? "🔊" : "🔈"}
             />
             </>
         );
