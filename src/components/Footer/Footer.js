@@ -16,7 +16,7 @@ class Footer extends Component {
     handleResetSubmit(e) {
         e.preventDefault();
         const audio = new Audio();
-        audio.src = '/assets/sounds/zapsplat_science_fiction_machine_power_down_55173.mp3';
+        audio.src = 'assets/sounds/zapsplat_science_fiction_machine_power_down_55173.mp3';
         audio.play();
 
         this.props.handleReset();
@@ -27,7 +27,7 @@ class Footer extends Component {
         e.preventDefault();
         const { players } = this.props;
         const audio = new Audio();
-        audio.src = '/assets/sounds/zapsplat_science_fiction_robot_power_up_surge_003_45219.mp3';
+        audio.src = 'assets/sounds/zapsplat_science_fiction_robot_power_up_surge_003_45219.mp3';
         audio.play();
 
         this.props.handleStartTournament(players);
@@ -37,7 +37,7 @@ class Footer extends Component {
     handleErrorSubmit(e) {
         e.preventDefault();
         const audio = new Audio();
-        audio.src = '/assets/sounds/zapsplat_science_fiction_console_error_tone_001_38432.mp3';
+        audio.src = 'assets/sounds/zapsplat_science_fiction_console_error_tone_001_38432.mp3';
         audio.play();
         
         this.props.handleError();

@@ -18,11 +18,11 @@ class Round extends Component {
 
         if(i + 1 === totalRounds) {
             const audio = new Audio();
-            audio.src = '/assets/sounds/Ryan_VanEerde_Sci-Fi_Explosion_2_20.mp3';
+            audio.src = 'assets/sounds/Ryan_VanEerde_Sci-Fi_Explosion_2_20.mp3';
             audio.play();
         } else {
             const audio = new Audio();
-            audio.src = '/assets/sounds/zapsplat_science_fiction_vehicles_zoom_by_ultra_sonic_whoosh_002_55942.mp3';
+            audio.src = 'assets/sounds/zapsplat_science_fiction_vehicles_zoom_by_ultra_sonic_whoosh_002_55942.mp3';
             audio.play();
         }
         this.props.handleNextRound();

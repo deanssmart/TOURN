@@ -25,7 +25,7 @@ class Settings extends Component {
 
         if(player !== "") {   
             const audio = new Audio();
-            audio.src = '/assets/sounds/zapsplat_science_fiction_button_press_beep_44987.mp3';
+            audio.src = 'assets/sounds/zapsplat_science_fiction_button_press_beep_44987.mp3';
             audio.play();     
             this.props.handleAddPlayer(player);
         };

@@ -7,7 +7,7 @@ class Music extends Component {
 
         this.state = {
             musicPlaying: true,
-            music: new Audio('/assets/sounds/SearchingForYou-WhiteHex.mp3'),
+            music: new Audio('assets/sounds/SearchingForYou-WhiteHex.mp3'),
         };
 
         this.handleToggle = this.handleToggle.bind(this);
