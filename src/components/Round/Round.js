@@ -12,8 +12,19 @@ class Round extends Component {
     };
 
     //passes the players who won their round from the players array to the rounds array 
-    handleSubmitNextRound(e) {
+    handleSubmitNextRound(e, i) {
         e.preventDefault();
+        const { totalRounds } = this.props;
+
+        if(i + 1 === totalRounds) {
+            const audio = new Audio();
+            audio.src = '/assets/sounds/Ryan_VanEerde_Sci-Fi_Explosion_2_20.mp3';
+            audio.play();
+        } else {
+            const audio = new Audio();
+            audio.src = '/assets/sounds/zapsplat_science_fiction_vehicles_zoom_by_ultra_sonic_whoosh_002_55942.mp3';
+            audio.play();
+        }
         this.props.handleNextRound();
     };
 
@@ -40,7 +51,7 @@ class Round extends Component {
                         {/* button disabled until all games in the round are complete */}
                         <Button
                             buttonClass={ (playerCounter === (round.length / 2) ?"animated-" : "button-blue disabled-") + "button-blue game-component-blue"}
-                            handleClick={ this.handleSubmitNextRound }
+                            handleClick={ (e) => this.handleSubmitNextRound(e, i) }
                             type="submit"
                             label={ i + 1 === totalRounds ? 'Tournament Master' : "Next Round" }
                             disable={ playerCounter !== (round.length / 2) } 

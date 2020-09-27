@@ -415,7 +415,7 @@
   }
 
   .sound-button {
-        position: absolute;
+        position: fixed;
         top: 1rem;
         right: 1rem;
         border-radius: 50%;
@@ -435,6 +435,12 @@
   .sound-button:focus {
     outline: none;
     box-shadow: 0 0 0 2px var(--appBlueHighlight);
+}
+
+@media (max-width: 850px) {
+    .sound-button {
+        top: 90%;               
+    }
 }
 
 
