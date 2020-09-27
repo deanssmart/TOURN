@@ -27,9 +27,9 @@ Tron(esque) themed app which randomly creates pairings for a tournament bracket 
 - Player number validation
 - Random pairing generator
 - Play multiple rounds
-- Intellegent round names
+- Smart round names
 - Ability to reset
-- Awesome sound effect and theme song 👍
+- Awesome sound effects and theme song 👍
 - Option to turn off theme song 👎
 - A nod to Tron and the 80's 🕹️
 
