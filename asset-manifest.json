@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/TOURN/static/css/main.763569a3.chunk.css",
-    "main.js": "/TOURN/static/js/main.6eacf123.chunk.js",
-    "main.js.map": "/TOURN/static/js/main.6eacf123.chunk.js.map",
+    "main.js": "/TOURN/static/js/main.4632762f.chunk.js",
+    "main.js.map": "/TOURN/static/js/main.4632762f.chunk.js.map",
     "runtime-main.js": "/TOURN/static/js/runtime-main.0090ccf0.js",
     "runtime-main.js.map": "/TOURN/static/js/runtime-main.0090ccf0.js.map",
     "static/js/2.b08f7512.chunk.js": "/TOURN/static/js/2.b08f7512.chunk.js",
     "static/js/2.b08f7512.chunk.js.map": "/TOURN/static/js/2.b08f7512.chunk.js.map",
     "index.html": "/TOURN/index.html",
-    "precache-manifest.c5a66d518b345d9ab6021e3d0d035357.js": "/TOURN/precache-manifest.c5a66d518b345d9ab6021e3d0d035357.js",
+    "precache-manifest.fd00b438444dbc8c8419c07128d1d903.js": "/TOURN/precache-manifest.fd00b438444dbc8c8419c07128d1d903.js",
     "service-worker.js": "/TOURN/service-worker.js",
     "static/css/main.763569a3.chunk.css.map": "/TOURN/static/css/main.763569a3.chunk.css.map",
     "static/js/2.b08f7512.chunk.js.LICENSE.txt": "/TOURN/static/js/2.b08f7512.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.0090ccf0.js",
     "static/js/2.b08f7512.chunk.js",
     "static/css/main.763569a3.chunk.css",
-    "static/js/main.6eacf123.chunk.js"
+    "static/js/main.4632762f.chunk.js"
   ]
 }
