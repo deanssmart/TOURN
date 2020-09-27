@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/tourn/static/css/main.adf163b4.chunk.css",
+    "main.js": "/tourn/static/js/main.016fc38e.chunk.js",
+    "main.js.map": "/tourn/static/js/main.016fc38e.chunk.js.map",
+    "runtime-main.js": "/tourn/static/js/runtime-main.f680db01.js",
+    "runtime-main.js.map": "/tourn/static/js/runtime-main.f680db01.js.map",
+    "static/js/2.b08f7512.chunk.js": "/tourn/static/js/2.b08f7512.chunk.js",
+    "static/js/2.b08f7512.chunk.js.map": "/tourn/static/js/2.b08f7512.chunk.js.map",
+    "index.html": "/tourn/index.html",
+    "precache-manifest.839128a166d47e32243ed7cba4cdf1c8.js": "/tourn/precache-manifest.839128a166d47e32243ed7cba4cdf1c8.js",
+    "service-worker.js": "/tourn/service-worker.js",
+    "static/css/main.adf163b4.chunk.css.map": "/tourn/static/css/main.adf163b4.chunk.css.map",
+    "static/js/2.b08f7512.chunk.js.LICENSE.txt": "/tourn/static/js/2.b08f7512.chunk.js.LICENSE.txt",
+    "static/media/styles.css": "/tourn/static/media/Tr2n.a05414ad.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f680db01.js",
+    "static/js/2.b08f7512.chunk.js",
+    "static/css/main.adf163b4.chunk.css",
+    "static/js/main.016fc38e.chunk.js"
+  ]
+}
