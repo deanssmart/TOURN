@@ -67,12 +67,3 @@ h3 {
     }
 }
 
-  /* @keyframes glow {
-    from {
-      text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 9px var(--appYellow), 0 0 12px var(--appYellow), 0 0 15px var(--appYellow), 0 0 18px var(--appYellow), 0 0 21px var(--appYellow);
-    }
-    
-    to {
-      text-shadow: 0 0 3px #fff, 0 0 6px var(--appYellow), 0 0 9px var(--appYellow), 0 0 12px var(--appYellow), 0 0 15px var(--appYellow), 0 0 18px var(--appYellow), 0 0 21px var(--appYellow);
-    }
-  }  */
