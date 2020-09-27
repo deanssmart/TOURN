@@ -1,6 +1,6 @@
 /* adapted tron style grid css from CodePen Joah Gerstenberg https://codepen.io/JoahG/pen/QJQdJB */
 
-.grid-container { width: 100%; position: fixed; bottom: 0; left: 0; z-index: -1; }
+.grid-container { width: 100%; position: fixed; bottom: 0; left: 0; z-index: -2; }
 
 .grid-container:after { 
   -webkit-mask-image: -webkit-gradient(linear, left 90%, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));

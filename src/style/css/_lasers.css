@@ -16,6 +16,7 @@
     transform-origin: 0 100%;
     -webkit-animation: laser 7s infinite;
     animation: laser 7s infinite;
+    z-index: -1;
   }
   .laser-beam.yellow {
     -webkit-animation: laser 7.5s infinite;
