@@ -52,12 +52,12 @@ Tron(esque) themed app which randomly creates pairings for a tournament bracket 
 ```shell 
 $ cd ~/your-directory-name-here
 ```
-3. Copy the SSH key from this GitHub repository `git@github.com:deanssmart/deanssmart-pingpong-tournament.git`
+3. Copy the SSH key from this GitHub repository `git@github.com:deanssmart/TOURN.git`
 
 4. Run the following code in your command line to clone the repo to your machine (you can change the app-name to what you desire):  
 
 ```shell 
-git clone git@github.com:deanssmart/deanssmart-pingpong-tournament.git <app-name>
+git clone git@github.com:deanssmart/TOURN.git <app-name>
 ```
 5. Navigate to your new app directory (the app name you just picked):
 
