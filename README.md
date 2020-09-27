@@ -6,7 +6,9 @@
 
 ### View the app online 
 
-Open the live app in your browser with this link: TBC
+Open the live app in your browser with this link: https://deanssmart.github.io/TOURN/
+
+- For ULTIMATE user experience allow autoplay on your browser 
 
 ## Intro
 
